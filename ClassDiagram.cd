@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="arrayList&lt;T&gt;">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <InheritanceLine Type="linearList&lt;T&gt;" ManuallyRouted="true">
+      <Path>
+        <Point X="1.25" Y="1.048" />
+        <Point X="1.25" Y="1.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAIBAAAAAAAwIQBgiCAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>arrayList.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="linearList&lt;T&gt;" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIBAAAAAAAUIQAACCAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>linearList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

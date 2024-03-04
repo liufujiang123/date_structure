@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="linearList&lt;T&gt;">
+    <Position X="0.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIBAAAAAAAUIQAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>linearList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="arrayList&lt;T&gt;">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="arrayList&lt;T&gt;::iterator" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>arrayList.cpp</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAIAAAACAIBEAAAAAAwIQRgyAAEAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>arrayList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="chain&lt;T&gt;">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <NestedTypes>
+      <Class Name="chain&lt;T&gt;::iterator" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>chain.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAEAAACAIBAAAAIAIQIQAASCAAAAAAAAAAAAAwAAAA=</HashCode>
+      <FileName>chain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dictionary&lt;K, E&gt;">
+    <Position X="4.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAIAIAAACAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>dictionary.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Node&lt;T&gt;">
+    <Position X="3.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAMAAAA=</HashCode>
+      <FileName>chain.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
