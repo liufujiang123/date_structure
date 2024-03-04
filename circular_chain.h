@@ -79,6 +79,7 @@ int circular_chain<T>::index_of(T element)const
 	else return index;
 }
 //第一次更改
+//第二次更改
 
 #endif // !_CIRCULAR_CHAIN_H_
 
