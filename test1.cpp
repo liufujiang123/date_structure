@@ -5,19 +5,14 @@
 //
 
 //创建线程私有变量
-struct sub_sum
-{
-	char padding[56];
-	double val;
 
-};
-sub_sum* sum;
+double* sum;
 
 void* cal(void* arg);
 
 typedef struct {
 	double rad;
-	long long max_n;
+	int max_n;
 	int begin;
 	int step;
 }args;
@@ -29,16 +24,18 @@ int main(int argc, char* argv[])
 		exit(1);
 	}
 	double rad = atof(argv[1]);
-	long long n = atoi(argv[2]);
+	int n = atoi(argv[2]);
 	int thread_num = atoi(argv[3]);
 
-	sum = new sub_sum[thread_num];
-	args* arg = new args;
+	sum = new double[thread_num];
+	for (int i = 0; i < thread_num; sum[i++] = 0);
+	args* arg;
 	//创建线程
 	//线程编号
 	pthread_t* pid = new pthread_t[thread_num];
 	for (int i = 0; i < thread_num; i++)
 	{
+		arg = new args;
 		//本线程信息
 		arg->begin = i;
 		arg->max_n = n;
@@ -50,11 +47,13 @@ int main(int argc, char* argv[])
 	for (int i = 0; i < thread_num; i++) {
 		pthread_join(pid[i], NULL);
 	}
+
 	double sum_thread = 0;
 	for (int i = 0; i < thread_num; i++)
 	{
-		sum_thread += sum[i].val;
+		sum_thread += sum[i];
 	}
+	delete[]arg;
 	delete[]pid;
 	return 0;
 }
@@ -62,18 +61,20 @@ void* cal(void* farg)
 {
 	args* arg = (args*)farg;
 
-	sum[arg->begin].val = 0.0;
+	double val = 0.0;
 	for (int i = arg->begin; i <= arg->max_n; i += arg->step) {
 		double tmp = 1.0;
 		for (int j = 1; j <= 2 * i + 1; j++) {
 			tmp *= arg->rad / j;
 		}
 		if (i % 2 > 0) {
-			sum[arg->begin].val -= tmp;
+			val -= tmp;
 		}
 		else {
-			sum[arg->begin].val += tmp;
+			val += tmp;
 		}
 	}
+
+	sum[arg->begin] = val;
 	return NULL;
 }
