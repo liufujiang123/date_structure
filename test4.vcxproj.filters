@@ -27,6 +27,9 @@
     <ClCompile Include="circular_chain.h">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="test1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="linearList.h">
